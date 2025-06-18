@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulación Sistema Solar</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="space-bg" aria-label="Fondo del espacio con estrellas">
+      <div class="solar-system" aria-label="Sistema Solar animado">
+        <div class="orbit orbit-mercury" aria-label="Órbita de Mercurio">
+          <div class="planet-label">Mercurio</div>
+          <div class="planet mercury" aria-label="Planeta Mercurio"></div>
+        </div>
+
+        <div class="orbit orbit-venus" aria-label="Órbita de Venus">
+          <div class="planet-label">Venus</div>
+          <div class="planet venus" aria-label="Planeta Venus"></div>
+        </div>
+
+        <div class="orbit orbit-earth" aria-label="Órbita de la Tierra">
+          <div class="planet-label">Tierra</div>
+          <div class="planet earth" aria-label="Planeta Tierra">
+            <div class="moon-orbit" aria-label="Órbita de la Luna">
+              <div class="moon-label">Luna</div>
+              <div class="moon" aria-label="Luna"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="orbit orbit-mars" aria-label="Órbita de Marte">
+          <div class="planet-label">Marte</div>
+          <div class="planet mars" aria-label="Planeta Marte">
+            <div class="phobos-orbit" aria-label="Órbita de Fobos">
+              <div class="moon-label">Fobos</div>
+              <div class="phobos" aria-label="Fobos"></div>
+            </div>
+            <div class="deimos-orbit" aria-label="Órbita de Deimos">
+              <div class="moon-label">Deimos</div>
+              <div class="deimos" aria-label="Deimos"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="orbit orbit-jupiter" aria-label="Órbita de Júpiter">
+          <div class="planet-label">Júpiter</div>
+          <div class="planet jupiter" aria-label="Planeta Júpiter"></div>
+        </div>
+
+        <div class="orbit orbit-saturn" aria-label="Órbita de Saturno">
+          <div class="planet-label">Saturno</div>
+          <div class="planet saturn" aria-label="Planeta Saturno">
+            <div class="saturn-rings" aria-label="Anillos de Saturno"></div>
+          </div>
+        </div>
+
+        <div class="orbit orbit-uranus" aria-label="Órbita de Urano">
+          <div class="planet-label">Urano</div>
+          <div class="planet uranus" aria-label="Planeta Urano">
+            <div class="uranus-rings" aria-label="Anillos de Urano"></div>
+          </div>
+        </div>
+
+        <div class="orbit orbit-neptune" aria-label="Órbita de Neptuno">
+          <div class="planet-label">Neptuno</div>
+          <div class="planet neptune" aria-label="Planeta Neptuno"></div>
+        </div>
+
+        <div class="orbit orbit-asteroid-belt">
+          <div class="asteroid-belt" aria-label="Cinturón de asteroides principal"></div>
+        </div>
+
+        <div class="orbit orbit-kuiper-belt">
+          <div class="kuiper-belt" aria-label="Cinturón de Kuiper"></div>
+        </div>
+
+        <div class="sun" aria-label="Sol"></div>
+        <div class="interstellar-dust-gas" aria-label="Polvo y gas interestelar"></div>
+      </div>
+
+      <div id="planet-modal" class="modal hidden" aria-label="Ventana de información del planeta" role="dialog" aria-modal="true">
+        <div class="modal-content">
+          <span class="modal-close" id="modal-close" role="button" aria-label="Cerrar modal">&times;</span>
+          <h2 id="modal-title">Información del Planeta</h2>
+          <p id="modal-description">Descripción aquí.</p>
+        </div>
+      </div>
+
+      <button id="toggle-animation" aria-label="Botón para pausar o reanudar la animación">Pausar</button>
+      <button id="explosion-solar" aria-label="Botón para activar la explosión solar">Explosión solar</button>
+
+      <div id="speed-control" aria-label="Control de velocidad de la animación">
+        <label for="speedRange">Velocidad: <span id="speedValue">1x</span></label>
+        <input type="range" id="speedRange" min="0.2" max="5" step="0.1" value="1" aria-label="Rango de velocidad de la animación" />
+      </div>
+
+      <div id="planet-actions" class="planet-actions" aria-label="Acciones para el planeta seleccionado">
+        <button id="planet-info" aria-label="Mostrar información del planeta">Info</button>
+        <button id="planet-delete" aria-label="Eliminar el planeta seleccionado">Eliminar</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
