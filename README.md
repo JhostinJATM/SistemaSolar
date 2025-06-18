@@ -21,3 +21,9 @@ Este proyecto consiste en la creación de una maqueta de baja fidelidad sobre un
 ---
 
 *Proyecto desarrollado como práctica para mejorar habilidades en desarrollo web accesible y uso de inteligencia artificial en la generación de código.*
+
+---
+
+## Vista de ejemplo
+
+![Vista del sistema solar](img/vista.png)
